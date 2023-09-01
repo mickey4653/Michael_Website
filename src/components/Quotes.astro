@@ -1,0 +1,16 @@
+---
+import data from '../data/quotes.json';
+---
+
+<div class="quotes">
+    {
+        data.map(quote =>(
+        <div class="text-scale"><div class="element">{quote.topic}</div></div>
+    <div class="text-scale">
+    <p class="text-wrapper">{quote.content1}</p>
+    <p class="text-wrapper">{quote.content2}</p>
+    </div>
+        ))
+       
+    }
+    </div>
