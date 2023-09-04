@@ -299,7 +299,7 @@ li[role="none"],
     .nav-link{
         width:initial;
         font-size: var(--font-size-0);
-        padding: var(--size-1);
+        /* padding: var(--size-1); */
     }
    
 }
