@@ -1,0 +1,35 @@
+---
+import Navbar from '../components/Navbar.astro';
+const {title} = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <link rel="icon" type="image/x-icon" href="/resume_icon.svg" />
+       
+    <style is:global>
+      @import "../styles/global.css";
+      @import "../styles/home.css";
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+    <Navbar />
+    <main>
+      
+        <slot />
+        <!-- your content is injected here -->
+      </main>
+      <footer>
+        <small>DEVELOPED BY MICHAEL I. ADENIYI
+            <span class="span">@</span> <span id="designYear"></span> RESUME</small>
+      </footer>
+    </div>
+    <script>
+      document.querySelector('#designYear').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
