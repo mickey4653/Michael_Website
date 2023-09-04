@@ -17,11 +17,11 @@ import data from '../data/personal_info.json';
 </section>
 
 <script>
-   export let resume = {};
+   export let resume = null;
 
    async function fetchData(){
     try {
-        const resp = await fetch("../data/personal_info.json");
+        const resp = await fetch('https://michael-adeniyi-resume.netlify.app/.netlify/functions/getData');
         if(!resp.ok){
             throw new Error("Network response was not ok");
         }
