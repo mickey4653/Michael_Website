@@ -7,5 +7,6 @@ export default defineConfig({
           // Example: Minify local SVG 
           external: ["svgo"],
         }
-      }
+      },
+
 });

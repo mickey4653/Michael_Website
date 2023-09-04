@@ -1,0 +1,35 @@
+---
+import Button from "./Button.astro";
+import data from '../data/personal_info.json';
+---
+
+<section class="container-sm">
+
+  
+    <div class="grid-sm api-buttons">
+    <Button text="Get Info" link="#" style="secondary"/>
+    <Button text="Get Summary" link="#" style="secondary"/>
+    <Button text="Get Skills" link="#" style="secondary"/>
+    <Button text="Get Languages" link="#" style="secondary"/>
+    <Button text="Get Work Experience" link="#" style="secondary"/>
+    <Button text="Get Projects" link="#" style="secondary"/>
+    </div>
+</section>
+
+<script>
+   export let resume = {};
+
+   async function fetchData(){
+    try {
+        const resp = await fetch("../data/personal_info.json");
+        if(!resp.ok){
+            throw new Error("Network response was not ok");
+        }
+        resume = await resp.json();
+    } catch(err){
+        console.error("Error fetching data:", err);
+    }
+   }
+
+fetchData();
+</script>

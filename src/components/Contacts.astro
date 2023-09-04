@@ -1,0 +1,19 @@
+---
+import data from '../data/personal_info.json';
+import { Icon } from 'astro-icon';
+---
+
+
+<section class="contact grid-sm container-sm">
+<h2 class="contact-title">Contact Me</h2>
+     {
+       data.map((contact)=>(
+            <p class="contact-phone">{contact.info.phone}</p>
+            <a class="contact-link" href="">{contact.info.email}</a>
+            <div class="contact-icons">
+                <a href={contact.info.github}><Icon name="grommet-icons:github" width={35}/></a>
+                <a href={contact.info.linkedln}><Icon name="grommet-icons:linkedin" width={35}/></a>
+            </div>
+       ))
+     }
+</section>

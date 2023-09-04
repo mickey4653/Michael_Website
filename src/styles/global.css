@@ -167,7 +167,7 @@ small{
     font-size: var(--font-size-00);
 
 }
-/* .grid-sm{
+.grid-sm{
     display: grid;
     place-items: center;
     gap: var(--size-fluid-1);
@@ -182,7 +182,7 @@ small{
     place-items: center;
     align-content: center;
     gap: var(--size-fluid-3);
-} */
+}
 
 
 /* COMPONENTS */
@@ -550,7 +550,55 @@ li[role="none"],
     }
 }
 
+/* ABOUT ME */
 
+
+
+
+/* CONTACT */
+.contact{
+    gap: calc(var(--size-2) * 0.75);
+}
+
+.contact-title{
+    color: hsl(var(--accent1));
+    margin: 5px 0;
+}
+.contact-phone{
+  color: hsl(var(--accent2));
+}
+.contact-link{
+    padding: var(--size-1);
+    color: hsl(var(--text));
+    cursor: pointer;
+}
+.contact-link:hover{
+    color: hsl(var(--accent1));
+}
+
+.contact-icons{
+    display: flex;
+    gap: var(--size-3);
+    padding: var(--size-1);
+}
+.contact-icons a{
+    text-decoration: none;
+    cursor: pointer;
+    color: hsl(var(--accent2));
+}
+.contact-icons a:hover{
+    color: hsl(var(--accent1));
+}
+@media (max-width: 768px) {
+    .contact{
+        grid-template-columns: 1fr; /* Change to a single column layout */
+    }
+
+    .contact-icons {
+      flex-direction: column; /* Switch to a vertical layout */
+    }
+  }
+  
 /* FOOTER */
 footer{
     display:grid;

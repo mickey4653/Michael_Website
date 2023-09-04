@@ -1,0 +1,135 @@
+[
+   {
+    "info": {
+        "firstname": "Michael",
+        "lastname": "Adeniyi",
+        "email": "adeniyimichaelid@gmail.com",
+        "phone": "(703)826-5115",
+        "linkedln": "https://www.linkedin.com/in/michaeliadeniyi/",
+        "github": "https://github.com/mickey4653/",
+        "disabled": "false",
+        "veteran": "false"
+    },
+    "summary": {
+         "about": "Michael Adeniyi is a Software Engineer with a broad skill set and a strong background in software development. His expertise encompasses full-stack development, including backend and microservices development, and he is well-versed in various programming languages, including Java, C, C++, JavaScript, Python, and PHP. Michael has hands-on experience with frameworks like AngularJS, NodeJS, and Spring Boot, and he's proficient in Git, SQL Workbench, and unit testing with JUnit and Web Selenium. He's also skilled in working with databases such as Oracle SQL, MySQL, and Microsoft SQL Server.", 
+         "content2": "Michael holds a Master's in Software Engineering with a Minor in Cybersecurity from the University of Maryland, College Park, and a Bachelor's in Computer Science from Babcock University. He brings solid soft skills, attention to detail, problem-solving abilities, and strong communication skills to his work.",
+         "content3": "Michael's professional experience includes his current role at ITECH Data Consult, where he has led the design and development of user-friendly web applications resulting in a 30% boost in user engagement. He has successfully collaborated with cross-functional teams to identify and resolve software defects, streamline testing processes, and integrate modern technologies into existing systems. Michael's commitment to staying updated with emerging technologies aligns perfectly with his career goal to grow into a leadership role while continuously expanding his software engineering skills.",
+         "content4": "In addition to his professional experience, Michael has showcased leadership skills by leading several software development projects. Notably, he led the development of an online learning platform for UMD students, demonstrating his ability to conceptualize, plan, and execute innovative solutions to meet the needs of educational communities. Michael is passionate about technology and looks forward to bringing his expertise and enthusiasm to innovative organizations like yours."
+        },
+    "skills": {
+        "programminglanguages":[
+            "Java",
+            "C",
+            "C++",
+            "Javascript",
+            "Python",
+            "PHP"
+        ],
+        "webtechnologies":[
+            "AngularJS",
+            "NodeJS",
+            "HTML",
+            "CSS"
+        ],
+        "Databases":[
+            "Oracle SQL",
+            "MySQL",
+            "Microsoft SQL Server"
+        ],
+        "Frameworks":[
+            "Scrum",
+            "Flutter",
+            "GIt",
+            "SQL Workbench",
+            "Unit(JUnit, Web Selenium)",
+            ".Net",
+            "Spring Boot",
+            "JMockito",
+            "Astro"
+        ],
+        "Networking":[
+            "LAN/WAN Operations",
+            "DNS/VPN/DHCP"
+        ],
+        "Others": [
+            "Power BI(Microsoft Power BI Desktop, Power BI Service)",
+            "CorelDraw",
+            "Video Editing",
+            "Postman",
+            "Figma"
+        ],
+        "Languages":[
+            "English",
+            "Yoruba",
+            "Turkish"
+        ],
+        "workExperience":[
+            {
+                "company":"ITECH Data Consult",
+                "start_date":"Jan. 2021",
+                "end_date": "Present",
+                "position":"Software Developer",
+                "responsibilities":[
+                   "Led the design and development of user-friendly web applications, resulting in a 30% boost in user engagement and positive feedback.",
+                   "Collaborated across cross-functional teams to swiftly identify and resolve critical software defects, reducing system crashes by 25% and enhancing stability.",
+                   "Integrated modern technologies into existing systems, contributing to a 15% improvement in performance and alignment with industry best practices.",
+                   "Contributed to the design of intuitive mobile applications, leveraging basic familiarity with Flutter and React Native, while working alongside more experienced team members.",
+                   "Orchestrated app hosting and deployment using cloud platforms, ensuring high availability and scalability."
+                ]
+             },
+            {
+               "company":"JK Consulting Co. Ltd",
+               "start_date":"Nov. 2017",
+               "end_date":"Jan. 2019",
+               "position":"Software Developer",
+               "responsibilities":[
+                  "Developed highly scalable and responsive web applications using AngularJS frameworks, C#, Web API, TypeScript, JavaScript, CSS, and HTML, contributing to a 20% increase in application performance.",
+                  "Collaborated with cross-functional teams of developers to build sophisticated, visually immersive tools, resulting in a 30% improvement in user engagement.",
+                  "Implemented front-end, business logic, and data access layers for full-stack web development, reducing development time by 15%.",
+                  "Maintained and enhanced legacy code, including bug fixes and performance improvements, resulting in a 20% reduction in system crashes."
+               ]
+            },
+            {
+               "company":"First Wave Networks",
+               "start_date":"Oct. 2015",
+               "end_date":"Nov. 2017",
+               "position":"Software Engineer/Network Technician",
+               "responsibilities":[
+                  "Proficiently managed network systems, ensuring uninterrupted internet connectivity and optimizing performance.",
+                  "Conducted proactive troubleshooting and configuration of routers, minimizing network downtime and enhancing user experience.",
+                  "Developed two web and mobile applications in alignment with business requirements, showcasing my software development skills.",
+                  "Demonstrated versatility across both network management and software development domains, showcasing a comprehensive skill set."
+               ]
+            }
+         ],
+         "projects":[
+            {
+               "name":"Michael’s website",
+               "start_date":"Aug. 2023",
+               "end_date":"Sep. 2023",
+               "description":[
+                  "Developed and launched a dynamic personal website using Figma(for UI/UX Design) and Astro framework, integrating API calls to retrieve and display personalized data, resulting in an engaging user experience that effectively showcases my skills, projects, and achievements."
+               ]
+            },
+            {
+               "name":"Software Testing",
+               "start_date":"Jan.2023",
+               "end_date":"May.2023",
+               "description":[
+                  "Applied Dependency Injection design pattern on Spring for Micro Services programs, then conducted Unit testing and integration testing.",
+                  "Tested online material management systems using Mockito for services mocking and Selenium for automated web testing."
+               ]
+            },
+            {
+               "name":"Knowledge-Grab",
+               "start_date":"Sep.2021",
+               "end_date":"Dec.2021",
+               "description":[
+                  "Provided an online learning platform for UMD students by developing a full-stack online learning/teaching platform on Angular and deploying on AWS EC2 with a satisfaction rate of 90%.",
+                  "Modularize the system by implementing a Database Access Layer and applying a micro-services design pattern."
+               ]
+            }
+         ]
+    }
+}
+]

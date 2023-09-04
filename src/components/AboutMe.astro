@@ -1,0 +1,33 @@
+---
+import data from '../data/personal_info.json';
+---
+<section class="about container-sm">
+<h2 class="about-title">About Me</h2>
+{
+    data.map((abt)=>(
+        <h3>Personal Info</h3>
+        <ul>
+            <li><strong>Full Name: </strong>{abt.info.firstname}{abt.info.lastname}</li>
+            <li><strong>Phone: </strong>{abt.info.phone}</li>
+            <li><strong>Email: </strong>{abt.info.email}</li>
+            <li><strong>Linkedln: </strong><a href={abt.info.linkedln}>{abt.info.linkedln}</a></li>
+            <li><strong>GitHub: </strong><a href={abt.info.github}>{abt.info.github}</a></li>
+        </ul>
+        <h3>Skills</h3>
+        <ul>
+            <li><strong>Programming Languages: </strong>{abt.skills.programminglanguages.join(", ")}</li>
+            <li><strong>Frameworks: </strong>{abt.skills.Frameworks.join(", ")}</li>
+            <li><strong>Databases: </strong>{abt.skills.Databases.join(", ")}</li>
+            <li><strong>Others: </strong>{abt.skills.Others.join(", ")}</li>
+        </ul>
+
+        <br>
+        <h1>Summary</h1>
+        <p class="summary-content">{abt.summary.about}</p>
+        <p class="summary-content2">{abt.summary.content2}</p>
+        <p class="summary-content3">{abt.summary.content3}</p>
+        <p class="summary-content4">{abt.summary.content4}</p>
+    ))
+}
+</section>
+

@@ -8,22 +8,22 @@ const navLinks = [
     },
     {
         name: 'About Me',
-        url: '#',
+        url: '/aboutme',
         style: 'transparent',
     },
     {
         name: 'API',
-        url: '#',
+        url: '/api',
         style: 'transparent',
     },
     {
         name: 'Contact',
-        url: '3',
+        url: '/contact',
         style: 'transparent',
     },
     {
         name: 'Download Resume',
-        url : '#',
+        url : '../resume/Updated%20Resume%204v1.pdf',
         style: 'primary',
     },
 ];
@@ -41,7 +41,7 @@ const navLinks = [
             navLinks.map((link, index) => (
                 <li role="none">
                     {index === navLinks.length - 1 ? (
-                        <a href="../resume/Updated%20Resume%204v1.pdf" download class={`btn btn--${link.style} nav-link`}>
+                        <a href={link.url} download class={`btn btn--${link.style} nav-link`}>
                         {link.name}
                     </a>
                     ) : (
