@@ -2,9 +2,9 @@
   "name": "verdant-venus",
   "type": "module",
   "version": "0.0.1",
-  "browserslist":[
+  "browserslist": [
     "defaults"
-  ], 
+  ],
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -18,6 +18,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.15",
+    "hint": "^7.1.10",
     "open-props": "^1.5.15",
     "postcss": "^8.4.29",
     "postcss-jit-props": "^1.0.13"
