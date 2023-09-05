@@ -1,15 +1,14 @@
 const fs = require('fs');
+const path = require('path');
 
-exports.handler = async function(){
+exports.handler = async (event,context) => {
     try{
-        const data = fs.readFileSync('../data/personal_info.json', 'utf-8');
+        const dataPath = path.join(__dirname, '/data/personal_info.json');
+        const data = fs.readFileSync(dataPath, 'utf-8');
         const jsonData = JSON.parse(data);
         return{
             statusCode: 200,
             body: JSON.stringify(jsonData),
-            Headers:{
-                'Content-Type': 'application/json',
-            },
         };
     }catch(error){
         return {
