@@ -11,7 +11,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "start": "node index.js",
+    "start": "node ../functions/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
