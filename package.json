@@ -10,12 +10,17 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "astro": "^3.0.1",
     "astro-icon": "^0.8.1",
-    "axios": "^0.21.1"
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "json-serve": "^0.1.0",
+    "json-server": "^0.17.3"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.15",
