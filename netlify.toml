@@ -1,6 +1,7 @@
 [build]
   command = "npm install && npm run build"  # The build command for your project
   publish = "dist"
+  functions = "src\functions"
 
 [functions]
   directory = "functions"  # The directory where your Netlify Functions are located
