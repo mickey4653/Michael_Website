@@ -1,0 +1,9 @@
+[build]
+  command = "npm install && npm run build"  # The build command for your project
+  publish = "dist"
+
+[functions]
+  directory = "functions"  # The directory where your Netlify Functions are located
+
+[dev]
+  targetPort = 3000
