@@ -78,7 +78,7 @@ svg{
     --radius-6: 8rem;
 }
 
-@media(min-width:768px){
+@media screen and (min-width:768px){
     html{
         font-size: 120%;
     }
@@ -278,7 +278,7 @@ li[role="none"],
     width: calc(var(--size-fluid-8) * 0.75);
 }
 
-@media  (min-width: 900px){
+@media screen and (min-width: 900px){
     .nav-wrapper{
         gap: var(--size-4);
     }
@@ -415,7 +415,7 @@ li[role="none"],
 
 /* Media queries for different screen sizes */
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
     .header {
         grid-template-columns: 1fr; /* Reset to single column layout */
     }
@@ -454,7 +454,7 @@ li[role="none"],
 }
 
 /* Media Query for Medium Screens (e.g., Tablets) */
-@media (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
     /* Adjust styles for medium-sized screens */
 
     .header {
@@ -490,7 +490,7 @@ li[role="none"],
 }
 
 /* Media Query for Large Screens (e.g., Desktop) */
-@media (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
     /* Adjust styles for large screens */
 }
 
@@ -535,7 +535,7 @@ li[role="none"],
     font-size: var(--font-size-4);
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
     /* Styles for mobile phones */
     .quotes {
         padding: 10px; /* Adjust padding for smaller screens */
@@ -595,7 +595,7 @@ li[role="none"],
 .contact-icons a:hover{
     color: hsl(var(--accent1));
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .contact{
         grid-template-columns: 1fr; /* Change to a single column layout */
     }
