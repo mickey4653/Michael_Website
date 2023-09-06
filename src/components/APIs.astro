@@ -1,35 +1,159 @@
 ---
-import Button from "./Button.astro";
-import data from '../data/personal_info.json';
+// import Button from "./Button.astro";
+
 ---
 
-<section class="container-sm">
-
+<section class="api-container container-sm">
   
     <div class="grid-sm api-buttons">
-    <Button text="Get Info" link="#" style="secondary"/>
-    <Button text="Get Summary" link="#" style="secondary"/>
-    <Button text="Get Skills" link="#" style="secondary"/>
-    <Button text="Get Languages" link="#" style="secondary"/>
-    <Button text="Get Work Experience" link="#" style="secondary"/>
-    <Button text="Get Projects" link="#" style="secondary"/>
+    <button  id="info" class="btn btn--secondary">Get Info</button>
+    <button  id="summary" class="btn btn--secondary">Get Summary</button>
+    <button  id="skills" class="btn btn--secondary">Get Skills</button>
+    <button  id="languages" class="btn btn--secondary">Get Languages</button>
+    <button  id="workExperience" class="btn btn--secondary">Get Work Experience</button>
+    <button  id="projects" class="btn btn--secondary">Get Projects</button>
     </div>
+
+
+<pre class="display-data" id="dataDisplay"></pre>
+    
+
+
 </section>
 
-<script>
-   export let resume = null;
+<script>import type { Code } from "astro:components";
 
-   async function fetchData(){
+console.log('hello world');
+// import data from '../data/personal_info.json';
+const jsonServerUrl = 'https://resume-data.onrender.com/resume';
+
+const buttons = document.querySelectorAll(".api-buttons button");
+
+async function fetchData(dataIdentifier) {
     try {
-        const resp = await fetch('https://michael-adeniyi-resume.netlify.app/.netlify/functions/getData');
-        if(!resp.ok){
-            throw new Error("Network response was not ok");
-        }
-        resume = await resp.json();
-    } catch(err){
-        console.error("Error fetching data:", err);
-    }
-   }
+        // Access the data directly from the imported JSON file
+        // const dataObject = data[0]; // Assuming the JSON file contains an array with one object
+        // // console.log(dataObject);
+        // if (!dataObject) {
+        //     throw new Error('Data not found');
+        // }
+const response = await fetch(`${jsonServerUrl}`);
+if (!response.ok){
+    throw new Error(`Network response was not ok. URL: ${jsonServerUrl}`);
+}
 
-fetchData();
+const data = await response.json();
+
+        // Handle the data based on the button clicked
+        let displayText = "";
+
+        if (dataIdentifier === "info") {
+            // console.log(data[0].info.firstname);
+            const inf = data[0].info;
+            // console.log(inf); // Check if the 'info' object is accessible
+            displayText = `First Name: ${inf.firstname}`+`
+            Last Name: ${inf.lastname}` + `
+            Email: ${inf.email}` + `
+            Phone:${inf.phone}` + `
+            Linkedln: ${inf.linkedln}` +`
+            GitHub: ${inf.github}` + `
+            Disabled: ${inf.disabled}` + `
+            Veteran: ${inf.veteran}`;
+        } 
+        // console.log(data); // Check if the entire JSON data is imported correctly
+        else if (dataIdentifier === "summary") {
+            // Handle summary data
+            const summ = data[0].summary;
+            displayText = `About: ${summ.about}\n${summ.content2}
+            \n${summ.content3}\n${summ.content4}\n`;
+        } 
+        else if (dataIdentifier === "skills") {
+            // Handle skills data
+            const skill = data[0].skills;
+            displayText = `Skills: ${skill.programminglanguages}\n
+            ${skill.webtechnologies}\n${skill.Databases}\n
+            ${skill.Frameworks}\n${skill.Networking}\n${skill.Others}\n
+            ${skill.languages}\n`;
+        } else if (dataIdentifier === "languages") {
+            // Handle languages data
+            const lang = data[0].skills;
+            displayText = `Languages: ${lang.languages}\n`;
+        } 
+        else if (dataIdentifier === "workExperience") {
+            // Handle work experience data
+            const work = data[0].skills;
+            const workExperience = work.workExperience;
+            if(Array.isArray(workExperience)){
+            // console.log(work.workExperience);
+            displayText = `Work Experience: \n`;
+            workExperience.forEach((item)=>{
+            displayText += `  Company: ${item.company}\n`;
+            displayText += `  Start_date: ${item.start_date}\n`;
+            displayText += `  End_date: ${item.end_date}\n`;
+            displayText += `  Position: ${item.position}\n`;
+            displayText += `  Position: ${item.responsibilities}\n`;
+            });
+            // console.log(workExperience);
+            }else{
+                displayText = "No work experience data available";
+            }
+            
+        //   console.log(displayText);
+        } 
+        else if (dataIdentifier === "projects") {
+            // Handle projects data
+            const proj = data[0].skills; 
+            // console.log(proj.projects);
+            const projects = proj.projects;
+    if (Array.isArray(projects)) {
+        displayText = "Projects: \n";
+        projects.forEach((project, index) => {
+            displayText += `Project ${index + 1}:\n`;
+            displayText += `  Name: ${project.name}\n`;
+            displayText += `  Start_date: ${project.start_date}\n`;
+            displayText += `  End_date: ${project.end_date}\n`;
+            displayText += `  Description: ${project.description}\n`;
+            // Add more fields as needed
+        });
+        }else{
+            displayText = "No projects data available";
+        }
+    }
+        // console.log(displayText);
+        return displayText;
+    } catch (error) {
+        console.error('There was a problem with the data:', error);
+        return null;
+    }
+
+    
+}
+
+
+// Add a click event listener to each button
+buttons.forEach(button => {
+    button.addEventListener('click', async () => {
+        const dataIdentifier = button.id;
+        // console.log('Button clicked', dataIdentifier);
+        const dataDisplay = document.getElementById('dataDisplay');
+dataDisplay.textContent = JSON.stringify(dataIdentifier,null,2);
+        try {
+            const displayText = await fetchData(dataIdentifier);
+
+        //     console.log('Data Identifier:', dataIdentifier);
+        // console.log('Display Text:', displayText);
+
+            if (displayText !== null) {
+                // Handle the data, you can update your UI here
+                dataDisplay.textContent = displayText;
+            } else {
+                // Handle the case where data fetching failed
+                dataDisplay.textContent = 'Failed to fetch data';
+            }
+        } catch (error) {
+            console.error('There was a problem with the fetch operation:', error);
+            dataDisplay.textContent = 'Failed to fetch data';
+        }
+    });
+});
 </script>

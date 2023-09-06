@@ -599,6 +599,33 @@ li[role="none"],
     }
   }
   
+
+
+  /* API */
+  
+  .display-data{
+    background-color: #f4f4f4; /* Light gray background */
+    padding: 20px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif; /* Choose your preferred font */
+    font-size: 16px;
+    line-height: 1.5;
+    white-space: pre-line; /* Preserves line breaks in the text */
+  }
+
+  .api-buttons button {
+    border: none;
+}
+
+.api-buttons button:hover,
+.api-buttons button:focus {
+    background-color: hsl(var(--accent2)); /* Darker blue on hover/focus */
+    color: hsl(var(--white));
+    outline: none;
+}
+
+
+
 /* FOOTER */
 footer{
     display:grid;
