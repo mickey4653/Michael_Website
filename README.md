@@ -1,4 +1,4 @@
-[My Resume Website](https://michael-adeniyi-resume.netlify.app)
+[My Resume Website](https://bit.ly/3raUTUd)
 
 ![Thumbnail](https://github.com/mickey4653/Michael_Website/blob/main/src/designFile/designthumbnail.jpg)
 
