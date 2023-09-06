@@ -23,7 +23,7 @@ const navLinks = [
     },
     {
         name: 'Download Resume',
-        url : '../resume/Updated%20Resume%204v1.pdf',
+        url : 'src/resume/Updated Resume 4v1.pdf',
         style: 'primary',
     },
 ];
@@ -41,7 +41,7 @@ const navLinks = [
             navLinks.map((link, index) => (
                 <li role="none">
                     {index === navLinks.length - 1 ? (
-                        <a href={link.url} download class={`btn btn--${link.style} nav-link`}>
+                        <a href={link.url} download="src/resume/Updated Resume 4v1.pdf" class={`btn btn--${link.style} nav-link`}>
                         {link.name}
                     </a>
                     ) : (
