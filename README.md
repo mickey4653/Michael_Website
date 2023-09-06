@@ -1,5 +1,8 @@
 [My Resume Website](https://michael-adeniyi-resume.netlify.app)
 
+![Thumbnail](https://github.com/mickey4653/Michael_Website/blob/main/src/designFile/designthumbnail.jpg)
+
+
 # Astro Starter Kit: Basics
 
 ```
