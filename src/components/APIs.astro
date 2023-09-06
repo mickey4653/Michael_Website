@@ -85,7 +85,8 @@ const data = await response.json();
             if(Array.isArray(workExperience)){
             // console.log(work.workExperience);
             displayText = `Work Experience: \n`;
-            workExperience.forEach((item)=>{
+            workExperience.forEach((item,itemIndex)=>{
+            displayText += `Project ${itemIndex + 1}:\n`;
             displayText += `  Company: ${item.company}\n`;
             displayText += `  Start_date: ${item.start_date}\n`;
             displayText += `  End_date: ${item.end_date}\n`;
@@ -106,8 +107,8 @@ const data = await response.json();
             const projects = proj.projects;
     if (Array.isArray(projects)) {
         displayText = "Projects: \n";
-        projects.forEach((project, index) => {
-            displayText += `Project ${index + 1}:\n`;
+        projects.forEach((project, projIndex) => {
+            displayText += `Project ${projIndex + 1}:\n`;
             displayText += `  Name: ${project.name}\n`;
             displayText += `  Start_date: ${project.start_date}\n`;
             displayText += `  End_date: ${project.end_date}\n`;
