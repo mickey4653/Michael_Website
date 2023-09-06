@@ -59,16 +59,20 @@ const data = await response.json();
         else if (dataIdentifier === "summary") {
             // Handle summary data
             const summ = data[0].summary;
-            displayText = `About: ${summ.about}\n${summ.content2}
-            \n${summ.content3}\n${summ.content4}\n`;
+            displayText = `About: ${summ.about}\n
+            ${summ.content2}\n
+            ${summ.content3}\n
+            ${summ.content4}\n`;
         } 
         else if (dataIdentifier === "skills") {
             // Handle skills data
             const skill = data[0].skills;
             displayText = `Skills: ${skill.programminglanguages}\n
-            ${skill.webtechnologies}\n${skill.Databases}\n
-            ${skill.Frameworks}\n${skill.Networking}\n${skill.Others}\n
-            ${skill.languages}\n`;
+            Web Technologies: ${skill.webtechnologies}\n
+            Databases: ${skill.Databases}\n
+            Frameworks: ${skill.Frameworks}\n
+            Networking: ${skill.Networking}\n
+            Others: ${skill.Others}\n`;
         } else if (dataIdentifier === "languages") {
             // Handle languages data
             const lang = data[0].skills;
@@ -86,7 +90,7 @@ const data = await response.json();
             displayText += `  Start_date: ${item.start_date}\n`;
             displayText += `  End_date: ${item.end_date}\n`;
             displayText += `  Position: ${item.position}\n`;
-            displayText += `  Position: ${item.responsibilities}\n`;
+            displayText += `  Responsibility: ${item.responsibilities}\n`;
             });
             // console.log(workExperience);
             }else{
