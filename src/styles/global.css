@@ -611,14 +611,17 @@ li[role="none"],
   
   .display-data{
     background-color: #f4f4f4; /* Light gray background */
+   color: #333;
     padding: 20px;
     border-radius: 5px;
-    font-family: Arial, sans-serif; /* Choose your preferred font */
+    font-family: monospace, Arial, sans-serif; /* Choose your preferred font */
     font-size: 16px;
     line-height: 1.5;
+    border: 1px solid #ddd;
     white-space: pre-line; /* Preserves line breaks in the text */
   }
 
+  
   .api-buttons button {
     border: none;
 }

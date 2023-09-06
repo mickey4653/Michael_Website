@@ -1,8 +1,6 @@
 ---
 // import Button from "./Button.astro";
-
 ---
-
 <section class="api-container container-sm">
   
     <div class="grid-sm api-buttons">
@@ -14,16 +12,13 @@
     <button  id="projects" class="btn btn--secondary">Get Projects</button>
     </div>
 
-
 <pre class="display-data" id="dataDisplay"></pre>
     
-
-
 </section>
 
-<script>import type { Code } from "astro:components";
+<script>
+// console.log('hello world');
 
-console.log('hello world');
 // import data from '../data/personal_info.json';
 const jsonServerUrl = 'https://resume-data.onrender.com/resume';
 
@@ -125,10 +120,7 @@ const data = await response.json();
         console.error('There was a problem with the data:', error);
         return null;
     }
-
-    
 }
-
 
 // Add a click event listener to each button
 buttons.forEach(button => {
@@ -136,7 +128,7 @@ buttons.forEach(button => {
         const dataIdentifier = button.id;
         // console.log('Button clicked', dataIdentifier);
         const dataDisplay = document.getElementById('dataDisplay');
-dataDisplay.textContent = JSON.stringify(dataIdentifier,null,2);
+dataDisplay.textContent = JSON.stringify(dataIdentifier, null, 2);
         try {
             const displayText = await fetchData(dataIdentifier);
 
