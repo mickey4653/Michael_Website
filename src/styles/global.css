@@ -552,8 +552,14 @@ li[role="none"],
 
 /* ABOUT ME */
 
-
-
+#about-link{
+    text-decoration: none;
+    cursor: pointer;
+    color: hsl(var(--accent2));
+}
+ #about-link:hover{
+    color: hsl(var(--accent1));
+ }
 
 /* CONTACT */
 .contact{

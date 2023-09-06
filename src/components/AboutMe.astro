@@ -10,8 +10,8 @@ import data from '../data/personal_info.json';
             <li><strong>Full Name: </strong>{abt.info.firstname}{abt.info.lastname}</li>
             <li><strong>Phone: </strong>{abt.info.phone}</li>
             <li><strong>Email: </strong>{abt.info.email}</li>
-            <li><strong>Linkedln: </strong><a href={abt.info.linkedln}>{abt.info.linkedln}</a></li>
-            <li><strong>GitHub: </strong><a href={abt.info.github}>{abt.info.github}</a></li>
+            <li><strong>Linkedln: </strong><a id="about-link" href={abt.info.linkedln}>{abt.info.linkedln}</a></li>
+            <li><strong>GitHub: </strong><a id="about-link" href={abt.info.github}>{abt.info.github}</a></li>
         </ul>
         <h3>Skills</h3>
         <ul>
