@@ -86,7 +86,7 @@ const data = await response.json();
             // console.log(work.workExperience);
             displayText = `Work Experience: \n`;
             workExperience.forEach((item,itemIndex)=>{
-            displayText += `Project ${itemIndex + 1}:\n`;
+            displayText += `${itemIndex + 1}:\n`;
             displayText += `  Company: ${item.company}\n`;
             displayText += `  Start_date: ${item.start_date}\n`;
             displayText += `  End_date: ${item.end_date}\n`;
