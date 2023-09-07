@@ -76,8 +76,8 @@
 
   /* API */
   .display-data {
-    padding: 10px; /* Adjust padding for smaller screens */
-    font-size: 14px; /* Adjust font size for smaller screens */
+    padding: 8px; /* Adjust padding for smaller screens */
+    font-size: 12px; /* Adjust font size for smaller screens */
   }
 
   .api-buttons {
