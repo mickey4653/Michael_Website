@@ -249,7 +249,8 @@ border-color: hsl(var(--text));
 .nav-wrapper{
     display: flex;
     align-items: center;
-    gap: var(--size-5);
+    gap: var(--size-5); 
+    padding: 10px;
 }
 
 .nav-links{
