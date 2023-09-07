@@ -315,7 +315,18 @@ li[role="none"],
     .btn--menu {
         display: block;
       }
+
+.btn--transparent{
+        border-bottom: solid 2px;
+        border-color: hsl(var(--white));
+        /* border-radius: none; */
+    transition: border-color 0.3s ease;
+ }
     
+.btn--transparent:hover{
+    border-color: hsl(var(--text));
+    }
+
 .nav-links {
     flex-direction: column;
         border:none;
@@ -587,6 +598,66 @@ li[role="none"],
 }
 
 /* ABOUT ME */
+.about {
+    padding: var(--size-3);
+    text-align: center;
+    max-width: 100%;
+    overflow-x: hidden; /* Ensure content does not overflow horizontally */
+    box-sizing: border-box;
+}
+.about-title {
+    font-size: var(--font-size-5);
+    margin-bottom: var(--size-3);
+}
+.about h3 {
+    font-size: var(--font-size-4);
+    margin-top: var(--size-3);
+}
+.about ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.about ul li {
+    font-size: var(--font-size-3);
+    margin-bottom: var(--size-2);
+}
+.about ul li strong {
+    font-weight: bold;
+}
+.about ul li a {
+    text-decoration: none;
+    cursor: pointer;
+    color: hsl(var(--accent2));
+}
+.about ul li a:hover {
+    color: hsl(var(--accent1));
+}
+.about p.summary-content {
+    font-size: var(--font-size-3);
+    margin-top: var(--size-3);
+}
+
+@media screen and (max-width: 768px) {
+    /* Styles for mobile portrait phones */
+    .about-title {
+        font-size: var(--font-size-4); /* Adjust font size for smaller screens */
+    }
+
+    .about h3 {
+        font-size: var(--font-size-3); /* Adjust font size for smaller screens */
+    }
+
+    .about ul li {
+        font-size: var(--font-size-2); /* Adjust font size for smaller screens */
+    }
+
+    .about p.summary-content {
+        font-size: var(--font-size-2); /* Adjust font size for smaller screens */
+    }
+}
+
+
 
 #about-link{
     text-decoration: none;
@@ -596,6 +667,10 @@ li[role="none"],
  #about-link:hover{
     color: hsl(var(--accent1));
  }
+
+
+
+
 
 /* CONTACT */
 .contact{
@@ -640,8 +715,6 @@ li[role="none"],
       flex-direction: column; /* Switch to a vertical layout */
     }
   }
-  
-
 
   /* API */
   
@@ -657,7 +730,20 @@ li[role="none"],
     white-space: pre-line; /* Preserves line breaks in the text */
   }
 
+  /* Ensure that the button menu remains visible */
+  .api-buttons {
+    position: sticky;
+    top: 0;
+    /* Adding a background color to test responsiveness */
+    /* background-color: hsl(var(--accent2));  */
+     z-index: 1;
+  }
   
+/* Adjust the display data container to make space for the button menu */
+#dataDisplay {
+    margin-top: 2rem; /* Adjust the top margin to create space */
+  }
+
   .api-buttons button {
     border: none;
 }
