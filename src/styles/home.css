@@ -4,3 +4,63 @@
 		'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;
 	
 }
+
+
+/* Responsive Styles for Mobile Portrait Phones */
+@media screen and (max-width: 480px) {
+  /* Adjustments for smaller screens */
+  
+  /* Header */
+  .header-text {
+    font-size: 4vw; /* Adjust font size for smaller screens */
+  }
+
+  /* Frame Wrapper */
+  .frame-wrapper {
+    grid-template-columns: 1fr; /* Switch to a single column layout */
+    gap: var(--size-2); /* Adjust gap for smaller screens */
+    height: auto; /* Allow content to determine height */
+  }
+
+  /* Frame */
+  .frame {
+    height: auto; /* Allow content to determine height */
+  }
+
+  /* Quotes */
+  .quotes .element {
+    font-size: var(--font-size-5); /* Adjust font size for smaller screens */
+  }
+
+  .quotes .text-wrapper {
+    font-size: var(--font-size-3); /* Adjust font size for smaller screens */
+  }
+
+  /* About Me */
+  #about-link {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  /* Contact */
+  .contact-title {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .contact-phone {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+
+  .contact-link {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .contact-icons a {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  /* API */
+  .display-data {
+    padding: 10px; /* Adjust padding for smaller screens */
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
