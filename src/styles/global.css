@@ -657,8 +657,6 @@ li[role="none"],
     }
 }
 
-
-
 #about-link{
     text-decoration: none;
     cursor: pointer;
@@ -667,9 +665,6 @@ li[role="none"],
  #about-link:hover{
     color: hsl(var(--accent1));
  }
-
-
-
 
 
 /* CONTACT */

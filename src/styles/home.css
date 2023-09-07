@@ -38,7 +38,7 @@
 
   /* About Me */
   #about-link {
-    font-size: 1.5rem; /* Adjust font size for smaller screens */
+    font-size: 1rem; /* Adjust font size for smaller screens */
   }
   .about-title {
 	font-size: var(--font-size-3); /* Adjust font size for smaller screens */
