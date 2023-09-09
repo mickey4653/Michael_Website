@@ -751,6 +751,20 @@ li[role="none"],
     outline: none;
 }
 
+.loading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px; /* Adjust the margin as needed */
+  }
+  .loading-hidden{
+    display: none;
+  }
+.loading-container p{
+    font-size: var(--font-size-0);
+}
+
 /* FOOTER */
 footer{
     display:grid;
