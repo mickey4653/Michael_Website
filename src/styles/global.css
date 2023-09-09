@@ -237,6 +237,7 @@ border-color: hsl(var(--text));
 /* NAV */
 .nav-container{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: var(--size-fluid-2);
@@ -262,6 +263,7 @@ border-color: hsl(var(--text));
     padding: var(--size-3);
     border-bottom: 2px solid hsl(var(--accent2));
     z-index: 1;
+   
 }
 
 li[role="none"],
@@ -284,14 +286,15 @@ li[role="none"],
         display: none;
     }
     .nav-links{
+        display: flex;
         flex-direction: row;
         position: static;
         transform: translateY(0);
-        border:none;
+        border:none; 
         padding: 0;
         inset: initial;
         background-color: transparent;
-        white-space: nowrap;
+        white-space: nowrap; 
     }
     li[role="none"],
     .nav-link{
